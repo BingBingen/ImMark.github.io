@@ -1,0 +1,496 @@
+/* Header and General Settings */
+*{
+  margin: 0px;
+  padding: 0px; 
+  box-sizing: border-box;
+  
+}
+
+@font-face{
+  font-family: 'custom';
+  src: url('fonts/noyh-r-semi-light.eot') format('embedded-opentype'),
+       url('fonts/noyh-r-semi-light.woff') format('woff'),
+       url('fonts/noyh-r-semi-light.woff2') format('woff2'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+ul,ol{
+  list-style: none;
+}
+
+#nav-top{
+  display: flex;
+  align-items: center;
+  gap:15px;
+}
+
+#nav-top a{
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(130, 17, 130);
+}
+
+#nav-bottom{
+  display: flex;
+  justify-content: right;
+  margin-top: 5px;
+  align-items: center;
+  gap:10px;
+}
+
+
+#about-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: rgb(220, 243, 220);
+}
+
+#resume{
+  color: rgb(102, 156, 112);
+  font-weight: bolder;
+}
+
+#section-about > h1{ 
+  font-family: "Macondo", fantasy, "Inter";
+  font-weight:400;
+  font-size: 48px;
+}
+
+a, a img, a i, #submit {
+  transition: transform 0.3s ease;
+}
+
+#nav-top a:hover{
+  transform: scale(1.2);
+  color: rgb(169, 99, 169);
+}
+
+a img:hover, a i:hover, #submit:hover {
+  transform: scale(1.2);
+  filter:brightness(1.1)
+}
+
+@keyframes fadeHighLight{
+    0% { background-color: rgb(255, 255, 149); }
+    50% {background-color: lightyellow; }
+    100% { background-color: transparent; }
+}
+
+:target{
+    animation: fadeHighLight 1.5s ease-out;
+}
+
+header{
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  margin: 0px; 
+  padding-left: 125px;
+  padding-right: 125px;
+  height: 100px; 
+  width: 100%;
+  background-color: rgb(173, 225, 173);
+  clip-path: polygon(
+    0 0,        
+    100% 0,    
+    100% 100%,   
+    75% 90%,    
+    50% 100%,   
+    25% 90%,    
+    0 100%       
+  );  
+  align-items: center;
+  justify-content: space-between;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-bottom: 3px solid rgb(123, 160, 130);
+  font-weight: 500;
+}
+
+
+/* BIO and Section Format */
+main{
+  padding: 105px 30px 10px;
+  min-height:1000px;
+  background-color: rgb(255, 255, 255);
+  font-family: fantasy,"Inter", sans-serif;
+}
+
+.section-title{
+  display: inline-block;
+  padding: 5px 10px 0px;
+  margin: auto;
+  scroll-margin-top: 130px;
+
+  position: relative;
+  right: 45px;
+  z-index: 0;
+
+  background-color: rgb(253, 253, 212);
+  border-radius: 10px;
+}
+
+section{
+  position: relative;
+  min-height: 200px;
+  background-color: rgb(220, 243, 220); 
+  border: 3px solid rgb(123, 160, 130);
+  /* Ponder on This. This or green borders or nothing ? */
+  border-radius: 10px; 
+  padding: 15px 20px;
+  margin: 5px 5px 30px;
+  
+}
+
+.aboutme_photos{
+  position: relative;
+  width: 100%;
+  padding-top: 5px;
+  border-radius: 30px;
+}
+
+.aboutme_photos > img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+#wes-self{
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  display: block;
+  margin: auto;
+  width: 60%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+#capy{
+  position: absolute;
+  left: 7%;
+  top: 36.0%;
+  width: 30%;
+}
+
+#clover-cat{
+  position: absolute;
+  width: 25%;
+  left: 5%;
+  bottom: 62%;
+  z-index: 0;
+}
+
+#clover-bug{
+  position: absolute; 
+  width: 16%;
+  top: 0%;
+  right: 2%;
+}
+
+.divider{
+  position: relative;
+  bottom: 15px;
+  margin: auto;
+  display: block;
+  width: 40%;
+  border-bottom: 3px solid rgb(173, 225, 173);
+}
+
+div > p{
+  font-size: 1.1em;
+  text-indent: 35px;
+  margin: 0px 10px 25px;
+  line-height: 1.4em;
+}
+
+#motto{
+  font-family: 'custom', fantasy, sans-serif;
+  font-size: 1.15em;
+}
+/* Contact */
+
+#info-intro > h2{
+  text-align: center;
+  font-family: fantasy, "Inter", sans-serif;
+  font-size: 2.0em;
+}
+
+#norm-divider{
+  margin: auto;
+  margin-bottom: 15px;
+  display: block;
+  width: 30%;
+  border-bottom: 3px solid rgb(173, 225, 173);
+}
+
+.box-divider{
+  display: block;
+  position: relative;
+  bottom: 5%;
+  margin: auto;
+  width: 40%;
+  border-bottom: 3px dotted rgb(123, 160, 130);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.box-divider::after{
+  right: -20px;
+}
+
+.box-divider::before{
+  left: -20px;
+}
+
+.info-body p i, #resume-wrapper > p > i{
+  margin-right: 35px;
+}
+
+.info-message{
+  position: relative; 
+  height: auto;
+  width: auto;
+  max-width: 100%;
+}
+
+#clover-bell{
+  position: absolute;
+  display:inline-block;
+  height: auto;
+  width: 30%;
+  left: 70% ;
+  bottom: 35%;
+}
+
+
+.info-message > h2{
+  border-top: 3px dotted black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  height: 60px;
+  border-radius: 5px;
+}
+
+#info-form{
+  display: flex;
+  flex-direction: column;
+  margin: 5px 10px 10px;
+  gap: 15px;
+}
+
+
+input[type="text"]{
+  font-family: 'custom' ,"Inter", sans-serif;
+  font-size: large;
+}
+
+select{
+  font-family: 'custom' ,"Inter", sans-serif;
+  font-size:1.0em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 25px;
+}
+
+#form-name, #form-email{
+  border: 2px solid whitesmoke;
+  border-radius: 5px;  
+  width: 30%;
+}
+
+textarea{
+  width: 70%;
+  height: 100px;
+  font-family: 'custom' ,"Inter", sans-serif;
+  border: 2px solid whitesmoke;
+  font-size: 1.2em;
+  border-radius: 8px;;
+}
+
+::placeholder{
+  font-family: 'custom' ,"Inter", sans-serif;
+}
+
+#submit{
+  font-family: fantasy, "Inter", sans-serif;
+  font-size: 1.2em;
+  display:inline-block;
+  width: 20%;
+  height: 40px;
+  text-align: center;
+  padding-top: 7px;
+  border-radius: 7px;
+  border: 4px solid whitesmoke;
+  background-color: rgb(123, 160, 130);
+  cursor: pointer;
+}
+
+#experience-row{
+  display:flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+
+.box{
+  flex: 0 0 250px; 
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  height: 300px;
+  display: grid; 
+  grid-template-rows: 1fr 2fr; 
+  background-color: rgb(245, 245, 231);
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgb(123, 160, 130);
+  transition: transform 0.3s ease;
+}
+
+.box:hover{
+  transform: scale(1.05);
+}
+
+.image-wrapper{
+  padding: 10px 7px;
+}
+
+.exp-image{
+  flex: 0 0 100%;
+  height: 100px;
+  border-radius: 15px;
+  border: 2px solid rgb(237, 213, 213);
+  width: 100%; 
+  background-color: white;
+  object-fit: cover;
+  grid-row: 1 / 2;
+}
+
+.image-slider{
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+#ed-equity{
+  object-fit: fill;
+  padding: 5px 5px 5px;
+}
+
+#tislp{
+  object-fit: fill;
+  padding: 4px 3px 4px;
+}
+
+#podcast2{
+  object-fit:fill;
+}
+
+#restaurant{
+  object-fit: cover;
+  object-position: top;
+}
+
+.box-divider::after, .box-divider::before{
+  content: "🌸";
+  position: absolute;
+  bottom: -14px;
+  font-size: 80%;
+}
+
+.description-wrapper{
+  padding: 10px;
+  grid-row: 2 / 3;
+}
+
+.exp-title{
+  display: block;
+  font-size: 1.2em;
+  text-decoration: underline 3px pink;
+  text-align: center;
+}
+
+#title-ambassador{
+font-size: 1.17em;
+}
+
+.exp-description{
+  display: inline-block;
+  font-size:0.85em;
+}
+
+#title-qb{
+  font-size:1.17em;
+}
+
+.more{
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Gill Sans', fantasy, sans-serif;
+  color: rgb(123, 160, 130);
+}
+
+footer{
+  display: flex;
+  justify-content:space-between;
+  padding: 15px 20px;
+  background-color: rgb(123, 160, 130);
+  height:75px;
+  font-family: fantasy ,"Inter", sans-serif;
+}
+
+#footer-right{
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+}
+
+#footer-left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:5px;
+    
+}
+
+/* Unfinished... */ 
+.nav{
+  display: block;
+}
+
+#menu-btn{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display:none;
+  padding:5px;
+  border-radius: 5px;
+  background-color: rgb(220, 243, 220);
+  border: none;
+  font-size: 1.2em;
+  color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 618px){ /* around halfway */
+  #nav-top, #nav-bottom{
+    display:none;
+    flex-direction: column; 
+    background-color: rgb(173, 225, 173); 
+    position: absolute;
+    top: 110px;
+    right:0;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  #menu-btn{
+    display: block;
+  }
+
+
+}
+
