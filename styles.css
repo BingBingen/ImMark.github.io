@@ -6,6 +6,11 @@
   
 }
 
+html {
+  -webkit-text-size-adjust: 100%; 
+  text-size-adjust: 100%;
+}
+
 @font-face{
   font-family: 'custom';
   src: url('fonts/noyh-r-semi-light.eot') format('embedded-opentype'),
@@ -13,6 +18,7 @@
        url('fonts/noyh-r-semi-light.woff2') format('woff2'); 
   font-weight: normal;
   font-style: normal;
+  font-display: swap; 
 }
 
 ul,ol{
@@ -207,7 +213,7 @@ div > p{
 }
 
 #motto{
-  font-family: 'custom', fantasy, sans-serif;
+  font-family: 'custom', "Inter", sans-serif;
   font-size: 1.15em;
 }
 /* Contact */
